@@ -1,0 +1,143 @@
+#contact-info {
+    display: flex;                     /* set up flex container */
+    align-items: center;               /* vertically center items */
+    justify-content: space-evenly;     /* space them evenly horizontally */
+    min-height: 90vh;                  /* or calc(100vh - X) if you need near full viewport */
+    gap: 2rem;                         /* optional: space between columns */
+    padding: 2rem;                     /* space around content */
+    text-align: center;                /* centers text inside each flex item if needed */
+  }
+  
+  /* Left column (address + social) */
+  .contact-left {
+    flex: 1; /* allow it to grow or shrink if needed */
+  }
+  
+  /* Right column (form) */
+  .contact-right {
+    flex: 1; /* same flex basis for symmetrical layout */
+  }
+  
+  /* Basic styling for address block */
+  .contact-left address {
+    font-style: normal;   /* by default, <address> is italic; you can override */
+    margin-top: 1rem;     /* spacing above the address */
+    line-height: 1.6;     /* comfortable line spacing */
+  }
+  
+  /* Optional: style the social links container in left column */
+  .contact-left .social-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Basic form styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* limit the form width */
+    gap: 1rem;        /* vertical spacing between fields */
+  }
+  
+  /* Label + input style */
+  .contact-form label {
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  /* Button style */
+  .contact-form button {
+    background-color: #0066ff; /* or your brand color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #4A771E; /* slightly darker on hover */
+  }
+  
+
+
+
+  
+  
+  @media (max-width: 768px) {
+    #contact-info {
+      /* Switch from row to column layout */
+      flex-direction: column;
+      justify-content: center; /* center content vertically in column mode */
+    }
+  
+    .contact-left,
+    .contact-right {
+      /* optional: ensure each block spans full width in the column */
+      flex: 0 0 auto;
+      width: 100%;
+      
+      /* optional: add bottom spacing so they don’t stack too tightly */
+      margin-bottom: 2rem;
+    }
+  
+    /* If you need to remove or reduce top/bottom min-height for mobile:
+    #contact-info {
+      min-height: auto;
+    }
+    */
+  }
+  
+
+  /* For screens up to 412px wide (portrait on many phones) */
+@media (max-width: 412px) {
+    /* Show the toggle button, hide the nav menu by default */
+    .nav-toggle {
+      display: inline-block; /* become visible on small screens */
+    }
+  
+    .nav-menu {
+      display: none;         /* hide the menu on small screens unless toggled */
+      flex-direction: column;
+      background-color: #fff;
+      /* Optional: absolute positioning if you want an overlay style
+         position: absolute;
+         top: 70px;
+         left: 0;
+         width: 100%;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+      margin-top: 1rem;
+      gap: 1rem;             /* vertical gap between items */
+      text-align: center;    /* center them or align left as desired */
+    }
+  
+    /* .show-menu makes the menu visible when the button is clicked */
+    .nav-menu.show-menu {
+      display: flex;  /* now the menu appears */
+    }
+  
+    /* Shrink the logo so it fits better on narrower screens */
+    .main-nav .logo img {
+      max-height: 55px;
+    }
+  
+    /* Reduce link font size for phone screens */
+    .nav-menu li a {
+      font-size: 1rem;
+    }
+  
+    /* Adjust overall nav padding so it doesn’t overflow horizontally */
+    .main-nav {
+      padding: 0.5rem 1rem;
+    }
+  }
+  

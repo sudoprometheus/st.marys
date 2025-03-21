@@ -1,0 +1,165 @@
+.main-image {
+    height: calc(100vh - 60px); /* Adjust if your navbar height differs */
+    background-image: url('../images/main.svg'); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .main-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+    z-index: 1;
+  }
+  
+  .text-banner {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .text-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-banner h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+/* Banner */
+.banner {
+    text-align: center;
+    color: var(--text);
+    padding: 3rem 2rem;
+    background-color: var(--secondary-color);
+    min-height: 200px; /* Ensures a minimum height */
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Make font and layout responsive */
+  .banner h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner p {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  /* 📱 Responsive Tweaks for Phones */
+  @media (max-width: 768px) {
+    .banner {
+      padding: 2rem 1rem;
+    }
+  
+    .banner h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner p {
+      font-size: 0.95rem;
+    }
+  }
+
+  
+  /* cards */
+
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 2rem;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    background-color: #fff;
+    flex: 1 1 30%; /* 3 per row on wide screens */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+    min-height: 500px;
+
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* 📱 Mobile: Stack cards vertically */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* Island */
+
+  .island {
+    text-align: center; /* centers inline elements like img */
+    padding: 2rem;
+  }
+
+  .island h2{
+    padding: 0.2rem;
+    color: var(--text);
+  }
+  
+  .island img {
+    width: 50%; /* 100% - 35% = 65% */
+    height: auto; /* maintains aspect ratio */
+    display: inline-block;
+  }
+  
+  @media (max-width: 768px) {
+    .island img {
+        width: 100%; /* 100% - 35% = 65% */
+        height: auto;
+         /* maintains aspect ratio */
+        display: inline-block;
+      }
+  }

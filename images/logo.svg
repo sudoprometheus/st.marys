@@ -1,0 +1,31 @@
+<svg 
+    version="1.1" 
+    baseProfile="full" 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="200" 
+    height="100" 
+    viewBox="0 0 200 100">
+
+    <!-- M in a lighter blue (#2196F3) -->
+    <text 
+        x="70" 
+        y="65" 
+        font-family="Arial" 
+        font-size="60" 
+        fill="#2196F3" 
+        font-weight="bold">
+      M
+    </text>
+
+    <!-- S in a darker blue (#0D47A1), overlapping the M -->
+    <text 
+        x="40" 
+        y="65" 
+        font-family="Arial" 
+        font-size="60" 
+        fill="#0D47A1" 
+        font-weight="bold">
+      S
+    </text>
+
+</svg>
